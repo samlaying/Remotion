@@ -1,0 +1,31 @@
+{
+  "name": "remotion-project-manager",
+  "version": "1.0.0",
+  "description": "Remotion 视频项目管理系统",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render RemotionGuide out/remotion-guide.mp4",
+    "preview": "remotion render RemotionGuide out/remotion-guide-preview.mp4 --width=1280 --height=720",
+    "typecheck": "tsc --noEmit",
+    "list": "remotion compositions",
+    "validate": "remotion validate",
+    "render:all": "node scripts/render-all.js",
+    "project": "node scripts/project-manager.js",
+    "project:list": "node scripts/project-manager.js list",
+    "project:create": "node scripts/project-manager.js create",
+    "project:delete": "node scripts/project-manager.js delete"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.279",
+    "remotion": "^4.0.279",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.2"
+  }
+}
