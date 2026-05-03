@@ -29,8 +29,17 @@ activeProjects.forEach((project, index) => {
   try {
     const outputFile = path.join(outputDir, `${project.id}.mp4`);
 
+    // 在 Monorepo 中，我们需要进入具体的项目目录来执行渲染
+    const projectDir = path.join(__dirname, '../packages', `project-${project.id}`);
+
+    if (!fs.existsSync(projectDir)) {
+      console.log(`   ⚠️  项目目录不存在: ${projectDir}`);
+      console.log(`   跳过此项目\n`);
+      return;
+    }
+
     // 构建渲染命令
-    const renderCommand = `npx remotion render ${project.id} "${outputFile}" --width=${project.config.width} --height=${project.config.height}`;
+    const renderCommand = `cd "${projectDir}" && npx remotion render ${project.id} "${outputFile}" --width=${project.config.width} --height=${project.config.height}`;
 
     console.log(`   输出文件: ${outputFile}`);
     console.log(`   开始渲染...`);

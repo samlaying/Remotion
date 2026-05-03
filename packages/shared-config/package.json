@@ -1,0 +1,17 @@
+{
+  "name": "shared-config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Remotion 项目共享配置和工具",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

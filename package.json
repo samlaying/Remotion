@@ -1,31 +1,28 @@
 {
-  "name": "remotion-project-manager",
+  "name": "remotion-workspace",
   "version": "1.0.0",
-  "description": "Remotion 视频项目管理系统",
+  "description": "Remotion Monorepo 工作区",
   "private": true,
   "scripts": {
-    "dev": "remotion studio",
-    "render": "remotion render RemotionGuide out/remotion-guide.mp4",
-    "preview": "remotion render RemotionGuide out/remotion-guide-preview.mp4 --width=1280 --height=720",
-    "typecheck": "tsc --noEmit",
-    "list": "remotion compositions",
-    "validate": "remotion validate",
+    "dev": "pnpm --filter project-remotion-guide dev",
+    "dev:guide": "pnpm --filter project-remotion-guide dev",
+    "dev:grid": "pnpm --filter project-tech-grid dev",
+    "dev:card": "pnpm --filter project-3d-card dev",
+    "build": "pnpm --filter project-remotion-guide build",
+    "render": "pnpm --filter project-remotion-guide render",
+    "preview": "pnpm --filter project-remotion-guide preview",
+    "typecheck": "pnpm --filter project-remotion-guide typecheck",
     "render:all": "node scripts/render-all.js",
     "project": "node scripts/project-manager.js",
     "project:list": "node scripts/project-manager.js list",
     "project:create": "node scripts/project-manager.js create",
     "project:delete": "node scripts/project-manager.js delete"
   },
-  "dependencies": {
-    "@remotion/cli": "^4.0.279",
-    "remotion": "^4.0.279",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "zod": "^3.25.76"
-  },
-  "devDependencies": {
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
-    "typescript": "^5.9.2"
+  "keywords": ["remotion", "video", "monorepo"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
   }
 }

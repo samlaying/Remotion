@@ -8,7 +8,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { z } from "zod";
-import "../../styles.css";
+import "./styles.css";
 
 export const remotionGuideSchema = z.object({
   title: z.string(),

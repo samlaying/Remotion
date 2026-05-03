@@ -1,0 +1,26 @@
+{
+  "name": "project-remotion-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Remotion 技能指南视频项目",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render RemotionGuide out/remotion-guide.mp4",
+    "preview": "remotion render RemotionGuide out/remotion-guide-preview.mp4 --width=1280 --height=720",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.279",
+    "remotion": "^4.0.279",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^3.25.76",
+    "shared-config": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.2"
+  }
+}
