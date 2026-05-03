@@ -1,0 +1,24 @@
+{
+  "name": "ai-cloud-card-spiral",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "build": "remotion render src/index.ts AICloudCards out/ai-cloud-cards.webm --image-format=png --pixel-format=yuva420p --codec=vp9 --concurrency=1 --timeout=120000",
+    "render:transparent": "remotion render src/index.ts AICloudCards out/ai-cloud-cards.webm --image-format=png --pixel-format=yuva420p --codec=vp9 --concurrency=1 --timeout=120000",
+    "render:prores": "remotion render src/index.ts AICloudCards out/ai-cloud-cards.mov --image-format=png --pixel-format=yuva444p10le --codec=prores --prores-profile=4444 --concurrency=1 --timeout=120000",
+    "still": "remotion still src/index.ts AICloudCards out/ai-cloud-cards-preview.png --frame=90"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.456",
+    "@remotion/renderer": "4.0.456",
+    "remotion": "4.0.456",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}
