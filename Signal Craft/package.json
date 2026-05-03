@@ -1,0 +1,24 @@
+{
+  "name": "signal-craft",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI era product thinking video generated from draf.md",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render SignalCraft out/signal-craft.mp4",
+    "still": "remotion still SignalCraft out/signal-craft-preview.png --frame=120",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.279",
+    "remotion": "^4.0.279",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.2"
+  }
+}
